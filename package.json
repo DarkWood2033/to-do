@@ -10,6 +10,10 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
   },
+  "devDependencies": {
+    "bootstrap": "^4.5.2",
+    "font-awesome": "^4.7.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -1,0 +1,53 @@
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+p, a, span {
+    font-family: $font-family;
+    color: var(--color);
+}
+
+// Color
+@each $color, $type in $types {
+    .text_#{$type}{
+        color: $color;
+    }
+}
+.text_white{
+    color: $light_color;
+}
+.text_dark{
+    color: $dark_color;
+}
+
+// Customer
+.text_bold{
+    font-weight: bold;
+}
+.text_center{
+    text-align: center;
+}
+.text_left{
+    text-align: left;
+}
+.text_right{
+    text-align: right;
+}
+
+// Size
+h1, .h1{
+    font-size: 36px;
+}
+h2, .h2{
+    font-size: 30px;
+}
+h3, .h3{
+    font-size: 24px;
+}
+h4, .h4{
+    font-size: 18px;
+}
+h5, .h5{
+    font-size: 14px;
+}
+h6, .h6{
+    font-size: 12px;
+}
