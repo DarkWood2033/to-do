@@ -1,0 +1,8 @@
+i.fa{
+    color: var(--font_color);
+    @each $color, $type in $types {
+        &.#{$type}{
+            color: $color;
+        }
+    }
+}

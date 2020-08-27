@@ -1,0 +1,88 @@
+$relaction_navbar_content: 80px;
+$relaction_active_navbar_content: 230px;
+$border_menu: 15px;
+
+.l_main{
+    width: 100vw;
+    @import 'navbar';
+    @import 'content';
+    --width_menu: 80px;
+    &.full{
+        --width_menu: 230px;
+    }
+    &.hidden{
+        --width_menu: 0;
+    }
+    &.full .l_navbar, & .l_navbar:hover:not(.full){
+        transition: .5s;
+        width: $relaction_active_navbar_content;
+        .logo{
+            .action{
+                display: block;
+                .close{
+                    display: none;
+                }
+            }
+        }
+        .menu{
+            margin-left: $border_menu;
+            margin-right: $border_menu;
+            white-space: nowrap;
+            .menu_item{
+                overflow-x: hidden;
+                text-align: left;
+                &:hover{
+                    transition: 0.8s;
+                    padding-left: 15px;
+                    &.active{
+                        padding-left: 25px;
+                    }
+                }
+                &:after{
+                    content: attr(data-label);
+                    color: $light_color;
+                }
+                &.active{
+                    @include light($secondary);
+                    @include gradient($secondary);
+                    &:after{
+                        color: white;
+                    }
+                }
+            }
+            .line{
+                overflow: hidden;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                hr{
+                    display: none;
+                }
+                &:after{
+                    content: attr(data-label);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 599px){
+    .l_main{
+        .l_navbar{
+            width: 100vw !important;
+            display: none;
+            .logo{
+                .action{
+                    .close{
+                        display: inline !important;
+                    }
+                    .l_fix_navbar{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .l_content{
+            margin-left: 0;
+        }
+    }  
+}

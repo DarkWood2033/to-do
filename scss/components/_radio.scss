@@ -1,0 +1,53 @@
+$radio_size: 18px;
+
+.radio{
+    display: inline-block;
+    cursor: pointer;
+    .button{
+        display: inline-block;
+        width: $radio_size;
+        height: $radio_size;
+        border: 2px solid var(--color);
+        border-radius: 10px;
+        &.circle{
+            div{
+                position: relative;
+                width: 10px;
+                height: 10px;
+                top: 2px;
+                left: 2px;
+                border-radius: 10px;
+                background: var(--color);
+            }
+        }
+        &.full{
+            div{
+                position: relative;
+                width: $radio_size;
+                height: $radio_size;
+                border-radius: 10px;
+                top: -2px;
+                left: -2px;
+                background: var(--color);
+            }
+        }
+    }
+    span{
+        vertical-align: text-top;
+    }
+    @each $color, $type in $types {
+        & .button.#{$type}{
+            border: 2px solid $color;
+            &.circle{
+                div{
+                    background: $color;
+                }
+            }
+            &.full{
+                div{
+                    background: $color;
+                }
+            }
+        }
+    }
+}

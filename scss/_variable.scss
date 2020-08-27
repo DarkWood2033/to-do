@@ -7,8 +7,8 @@ $info: #00cfe8;
 
 $bg_dark_color: #262c49;
 $bg_light_color: #f8f8f8;
-$dark_color: #ebeefd;
-$light_color: #636363;
+$dark_color: #636363;
+$light_color: #aeb3ca;
 
 $font_family: 'Montserrat', sans-serif;
 
@@ -18,4 +18,8 @@ $types:
     $success 'success', 
     $error 'error', 
     $warning 'warning', 
-    $info 'info';
+    $info 'info',
+    $light_color 'light',
+    $dark_color 'dark';
+
+$border_raduis: 5px;
