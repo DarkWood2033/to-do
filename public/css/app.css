@@ -457,6 +457,10 @@ body {
   font-size: 16px;
 }
 
+.row > div > div {
+  height: 100%;
+}
+
 /* Plugins */
 /*!
  * Bootstrap Grid v4.5.2 (https://getbootstrap.com/)
@@ -6991,7 +6995,7 @@ html {
 
 /* Layouts */
 .l_main {
-  width: 100vw;
+  width: 100%;
   --width_menu: 80px;
 }
 
@@ -7321,5 +7325,397 @@ i.fa.dark {
 
 .radio .button.dark.full div {
   background: #636363;
+}
+
+button.text {
+  padding: 0;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  color: var(--color);
+}
+
+button.text.primary {
+  color: #10163a;
+}
+
+button.text.primary:hover {
+  transition: .5s;
+  color: black;
+}
+
+button.text.secondary {
+  color: #7367f0;
+}
+
+button.text.secondary:hover {
+  transition: .5s;
+  color: #3321e9;
+}
+
+button.text.success {
+  color: #28c76f;
+}
+
+button.text.success:hover {
+  transition: .5s;
+  color: #1b874b;
+}
+
+button.text.error {
+  color: #ea5455;
+}
+
+button.text.error:hover {
+  transition: .5s;
+  color: #d71a1c;
+}
+
+button.text.warning {
+  color: #ff9f43;
+}
+
+button.text.warning:hover {
+  transition: .5s;
+  color: #f67800;
+}
+
+button.text.info {
+  color: #00cfe8;
+}
+
+button.text.info:hover {
+  transition: .5s;
+  color: #008b9c;
+}
+
+button.text.light {
+  color: #aeb3ca;
+}
+
+button.text.light:hover {
+  transition: .5s;
+  color: #8088ac;
+}
+
+button.text.dark {
+  color: #636363;
+}
+
+button.text.dark:hover {
+  transition: .5s;
+  color: #3d3d3d;
+}
+
+button.default {
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 0.25rem;
+  background: linear-gradient(118deg, #7367f0, #5e50ee);
+}
+
+button.default:hover {
+  transition: .5s;
+  box-shadow: 0 0 10px 1px rgba(115, 103, 240, 0.75);
+}
+
+.checkbox {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.checkbox .button {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color);
+  border-radius: 4px;
+  position: relative;
+}
+
+.checkbox .button.square i {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.checkbox span {
+  vertical-align: text-top;
+}
+
+.checkbox .button.primary {
+  border: 2px solid #10163a;
+}
+
+.checkbox .button.primary.circle div {
+  background: #10163a;
+}
+
+.checkbox .button.secondary {
+  border: 2px solid #7367f0;
+}
+
+.checkbox .button.secondary.circle div {
+  background: #7367f0;
+}
+
+.checkbox .button.success {
+  border: 2px solid #28c76f;
+}
+
+.checkbox .button.success.circle div {
+  background: #28c76f;
+}
+
+.checkbox .button.error {
+  border: 2px solid #ea5455;
+}
+
+.checkbox .button.error.circle div {
+  background: #ea5455;
+}
+
+.checkbox .button.warning {
+  border: 2px solid #ff9f43;
+}
+
+.checkbox .button.warning.circle div {
+  background: #ff9f43;
+}
+
+.checkbox .button.info {
+  border: 2px solid #00cfe8;
+}
+
+.checkbox .button.info.circle div {
+  background: #00cfe8;
+}
+
+.checkbox .button.light {
+  border: 2px solid #aeb3ca;
+}
+
+.checkbox .button.light.circle div {
+  background: #aeb3ca;
+}
+
+.checkbox .button.dark {
+  border: 2px solid #636363;
+}
+
+.checkbox .button.dark.circle div {
+  background: #636363;
+}
+
+.dialog .title {
+  border-radius: 10px 10px 0 0;
+  background: #7367f0;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.dialog .title button {
+  float: right;
+  color: #e42728;
+}
+
+.dialog .title button:hover {
+  color: #c01819;
+}
+
+.dialog .content {
+  padding: 10px 15px;
+  background: #10163a;
+  border-radius: 0 0 10px 10px;
+}
+
+.dialog .content > div {
+  padding: 10px 0;
+}
+
+.dialog .content .action {
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.pagination div {
+  cursor: pointer;
+  text-align: center;
+  width: 40px;
+  margin: 0 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background: linear-gradient(118deg, #10163a, #0a0e26);
+}
+
+.pagination div:hover {
+  box-shadow: 0 0 10px 1px rgba(16, 22, 58, 0.75);
+}
+
+.pagination div:first-child {
+  margin-left: 0;
+}
+
+.pagination div:last-child {
+  margin-right: 0;
+}
+
+.pagination div.active {
+  background: linear-gradient(118deg, #7367f0, #5e50ee);
+}
+
+.pagination div.active:hover {
+  box-shadow: 0 0 10px 1px rgba(115, 103, 240, 0.75);
+}
+
+input.default {
+  border-radius: 0.25rem;
+  padding: 6px 10px;
+  width: 100%;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+input.default:focus {
+  padding: 4px 8px;
+  border: 2px solid #7367f0;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .content {
+  width: 400px;
+}
+
+/* ToDo */
+.todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo > div {
+  margin: 8px 0;
+  padding: 0 15px;
+}
+
+.todo_item {
+  color: white;
+  background: #10163a;
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #10163a;
+  box-shadow: 0 0 10px 1px rgba(16, 22, 58, 0.75);
+  background: linear-gradient(118deg, #10163a, #0a0e26);
+}
+
+.todo_item .action div {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.todo_item .text {
+  text-align: left;
+}
+
+.todo_item .text p {
+  color: white;
+}
+
+.todo_item .text.complited {
+  text-decoration: line-through;
+}
+
+.todo_item.secondary {
+  background: #7367f0;
+  border: 1px solid #7367f0;
+  box-shadow: 0 0 10px 1px rgba(115, 103, 240, 0.75);
+  background: linear-gradient(118deg, #7367f0, #5e50ee);
+}
+
+.board {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  background: #10163a;
+}
+
+.board .icon {
+  border-radius: 100px;
+  padding: 12px;
+}
+
+.board .icon.primary {
+  background-color: rgba(16, 22, 58, 0.15);
+}
+
+.board .icon.secondary {
+  background-color: rgba(115, 103, 240, 0.15);
+}
+
+.board .icon.success {
+  background-color: rgba(40, 199, 111, 0.15);
+}
+
+.board .icon.error {
+  background-color: rgba(234, 84, 85, 0.15);
+}
+
+.board .icon.warning {
+  background-color: rgba(255, 159, 67, 0.15);
+}
+
+.board .icon.info {
+  background-color: rgba(0, 207, 232, 0.15);
+}
+
+.board .icon.light {
+  background-color: rgba(174, 179, 202, 0.15);
+}
+
+.board .icon.dark {
+  background-color: rgba(99, 99, 99, 0.15);
+}
+
+.board .text {
+  text-align: center;
+}
+
+.board .text p {
+  color: white;
+}
+
+.board .text p.number {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.board .text p.title {
+  padding: 5px;
 }
 /*# sourceMappingURL=app.css.map */

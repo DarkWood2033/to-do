@@ -1,0 +1,32 @@
+.board{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    background: $primary;
+    .icon{
+        border-radius: 100px;
+        padding: 12px;
+        @each $color, $type in $types {
+            &.#{$type}{
+                background-color: rgba($color, 0.15);
+            }
+        }
+    }
+    .text{
+        text-align: center;
+        p{
+            color: white;
+        }
+        p.number{
+            font-size: 28px;
+            font-weight: bold;
+            padding: 5px
+        }
+        p.title{
+            padding: 5px
+        }
+    }
+}

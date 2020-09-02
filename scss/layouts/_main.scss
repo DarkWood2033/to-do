@@ -3,7 +3,7 @@ $relaction_active_navbar_content: 230px;
 $border_menu: 15px;
 
 .l_main{
-    width: 100vw;
+    width: 100%;
     @import 'navbar';
     @import 'content';
     --width_menu: 80px;

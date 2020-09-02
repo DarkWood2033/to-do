@@ -7,3 +7,23 @@
 @mixin gradient($color) {
     background: linear-gradient(118deg,$color,darken($color, 5%))
 }
+
+@mixin hover_color {
+    @each $color, $type in $types {
+        &.#{$type}{
+            color: $color;
+            &:hover{
+                transition: .5s;
+                color: darken($color, 15%);
+            }
+        }
+    }
+}
+
+@mixin background {
+    @each $color, $type in $types {
+        &.#{$type}{
+            background-color: $color;
+        }
+    }
+}

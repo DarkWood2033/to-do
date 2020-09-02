@@ -1,0 +1,13 @@
+input{
+    &.default{
+        border-radius: $border_radius;
+        padding: 6px 10px;
+        width: 100%;
+        border: none;
+        font-family: $font_family;
+        &:focus{
+            padding: 4px 8px;
+            border: 2px solid $secondary;
+        }
+    }
+}
