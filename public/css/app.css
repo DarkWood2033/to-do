@@ -461,6 +461,14 @@ body {
   height: 100%;
 }
 
+.form_control {
+  margin: 10px 0;
+}
+
+.form_control input, .form_control textarea, .form_control select {
+  margin-top: 5px;
+}
+
 /* Plugins */
 /*!
  * Bootstrap Grid v4.5.2 (https://getbootstrap.com/)
@@ -7513,6 +7521,7 @@ button.default:hover {
   padding: 10px;
   text-align: center;
   width: 100%;
+  color: white;
 }
 
 .dialog .title button {
@@ -7524,9 +7533,41 @@ button.default:hover {
   color: #c01819;
 }
 
+.dialog .title.primary {
+  background-color: #10163a;
+}
+
+.dialog .title.secondary {
+  background-color: #7367f0;
+}
+
+.dialog .title.success {
+  background-color: #28c76f;
+}
+
+.dialog .title.error {
+  background-color: #ea5455;
+}
+
+.dialog .title.warning {
+  background-color: #ff9f43;
+}
+
+.dialog .title.info {
+  background-color: #00cfe8;
+}
+
+.dialog .title.light {
+  background-color: #aeb3ca;
+}
+
+.dialog .title.dark {
+  background-color: #636363;
+}
+
 .dialog .content {
   padding: 10px 15px;
-  background: #10163a;
+  background: var(--bg_color);
   border-radius: 0 0 10px 10px;
 }
 
@@ -7602,6 +7643,22 @@ input.default:focus {
 
 .modal .content {
   width: 400px;
+}
+
+select.default {
+  border-radius: 0.25rem;
+  width: 100%;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding: 8px 12px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+select.default:focus {
+  border: 2px solid #7367f0;
+  padding: 6px 10px;
 }
 
 /* ToDo */
@@ -7717,5 +7774,26 @@ input.default:focus {
 
 .board .text p.title {
   padding: 5px;
+}
+
+.list_categories {
+  display: flex;
+  flex-direction: column;
+}
+
+.list_categories > div {
+  padding: 10px;
+  border-bottom: 1px solid var(--bg_color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.list_categories > div .action div {
+  display: inline;
+  margin: 0 5px;
+}
+
+.list_categories > div.header {
+  font-weight: bold;
 }
 /*# sourceMappingURL=app.css.map */

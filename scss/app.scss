@@ -22,8 +22,11 @@
 @import "components/pagination";
 @import "components/input";
 @import "components/modal";
+@import "components/select";
 
 /* ToDo */
 @import "todo/todo";
 @import "todo/todo_item";
 @import "todo/board";
+
+@import "categories/list_categories";

@@ -1,0 +1,19 @@
+.list_categories{
+    display: flex;
+    flex-direction: column;
+    & > div{
+        padding: 10px;
+        border-bottom: 1px solid var(--bg_color);
+        display: flex;
+        justify-content: space-between;
+        .action{
+            div{
+                display: inline;
+                margin: 0 5px;
+            }
+        }
+        &.header{
+            font-weight: bold;
+        }
+    }
+}
