@@ -13,7 +13,7 @@ function MenuComponent({categories}){
             text: item.name,
             icon: 'circle-o',
             type: 'menu',
-            url: ''
+            url: `/todos/${item.name}`
         })));
         return menuItem;
     }

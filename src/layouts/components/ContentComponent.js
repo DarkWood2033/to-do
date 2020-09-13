@@ -1,12 +1,9 @@
 import React from "react";
-// import ListRouter from "../../todo/ListRouter";
-import CategoryRouter from '../../categories/CategoryRouter';
+import Router from "./../../Router";
 
-function ContentComponent(){
+function ContentComponent({children}){
     return (
-        <div className="l_content">
-            <CategoryRouter />
-        </div>
+        <div className="l_content">{children}</div>
     );
 }
 
