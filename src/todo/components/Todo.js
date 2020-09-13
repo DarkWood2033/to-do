@@ -14,6 +14,7 @@ function Todo({todos, page, oneOfPage = 5}){
                     key={item.id}
                     id={item.id}
                     text={item.text}
+                    category_id={item.category_id}
                     complited={item.complited} />) 
                 : <p>Нет список задач.</p>
             }

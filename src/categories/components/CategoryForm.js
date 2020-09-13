@@ -38,20 +38,21 @@ function CategoryForm({data = {}, onAccept}){
     return (
         <div className="form">
             <div className="form_control">
-                <label for="name">Название</label>
-                <input 
-                    id="name"
-                    type="text" 
-                    value={name} 
-                    className="default" 
-                    placeholder="Название категории"
-                    onChange={event => setName(event.target.value)} />
+                <label>Название
+                    <input
+                        type="text" 
+                        value={name} 
+                        className="default" 
+                        placeholder="Название категории"
+                        onChange={event => setName(event.target.value)} />
+                </label>
             </div>
             <div className="form_control">
-                <label for="color">Цвет</label>
-                <select className="default" onChange={event => setColor(event.target.value)}>
-                    { colors.map((item, key) => <option key={key} value={item.color}>{item.name}</option>) }
-                </select>
+                <label>Цвет
+                    <select className="default" onChange={event => setColor(event.target.value)}>
+                        { colors.map((item, key) => <option key={key} value={item.color}>{item.name}</option>) }
+                    </select>
+                </label>
             </div>
             <div className="text_center">
                 <button className="default" onClick={() => {

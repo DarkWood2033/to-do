@@ -1,5 +1,5 @@
 import React from "react"
-import { Router as BaseRouter, Switch, Route, Redirect } from "react-router-dom"
+import { Router as BaseRouter, Switch, Route } from "react-router-dom"
 import { createBrowserHistory } from "history";
 import MainLayout from './layouts/MainLayout';
 
@@ -13,6 +13,9 @@ function Router(){
     return (
         <BaseRouter history={history}>
             <Switch>
+                <Route path="/" exact>
+                    <MainLayout>Главная</MainLayout>
+                </Route>
                 <Route path="/todos/:id">
                     <MainLayout><ListRouter /></MainLayout>
                 </Route>
@@ -21,6 +24,9 @@ function Router(){
                 </Route>
                 <Route path="/categories">
                     <MainLayout><CategoryRouter /></MainLayout>
+                </Route>
+                <Route>
+                    <MainLayout>404 Not found page</MainLayout>
                 </Route>
             </Switch>
         </BaseRouter>

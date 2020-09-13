@@ -4,6 +4,7 @@ import LineItemComponent from './LineItemComponent';
 import menuConfig from '../../../configs/menu';
 import {connect} from 'react-redux'; 
 import mapStateToProps from '../../../store/mapStateToProps';
+import {useLocation} from 'react-router-dom';
 
 function MenuComponent({categories}){
     const getMenuItem = () => {
@@ -17,7 +18,7 @@ function MenuComponent({categories}){
         })));
         return menuItem;
     }
-    const url = '/';
+    const url = useLocation().pathname;
     return (
         <div className="menu">
             { getMenuItem().map((item, key) => 

@@ -27,7 +27,7 @@ function ListRouter({todos, addTodo}){
                     onClick={() => dialog.prompt({
                         title: 'Создание задания',
                         form: TodoForm, 
-                        onAccept: text => addTodo({text})
+                        onAccept: data => addTodo(data)
                     }, {
                         btnText: 'Добавить'
                     })}

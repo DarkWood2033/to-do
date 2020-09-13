@@ -12,7 +12,7 @@ export function changeStatusTodo(state, id){
 }
 
 export function addTodo(state, payload){
-    let newState = [...state, {text: payload.text, complited: false, id: Date.now()}];
+    let newState = [...state, {text: payload.text, category_id: payload.category_id, complited: false, id: Date.now()}];
     return newState;
 }
 
