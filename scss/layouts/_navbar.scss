@@ -1,0 +1,56 @@
+.l_navbar{
+    z-index: 10;
+    height: 100vh;
+    position: fixed;
+    width: $relaction_navbar_content;
+    background: $primary;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 20px 10px;
+    .logo{
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        color: $secondary;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 26px;
+        font-weight: bold;
+        .title{
+            cursor: pointer;
+            span{
+                color: white;
+            }
+        }
+        .action{
+            display: none;
+            & > div{
+                margin: 0 3px;
+                cursor: pointer;
+                display: inline;
+            }
+            i{
+                margin-right: 5px;
+            }
+        }
+    }
+    .menu{
+        margin: 15px $border_menu;
+        .menu_item{
+            padding: 15px 5px;
+            text-align: center;
+            cursor: pointer;
+            &.active{
+                border-radius: $border_raduis;
+                background: $bg_dark_color;
+                margin-left: -10px;
+                margin-right: -10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                i{
+                    color:white
+                }
+            }
+        }
+    }
+}

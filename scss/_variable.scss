@@ -1,0 +1,25 @@
+$primary: #10163a;
+$secondary: #7367f0;
+$success: #28c76f;
+$error: #ea5455;
+$warning: #ff9f43;
+$info: #00cfe8;
+
+$bg_dark_color: #262c49;
+$bg_light_color: #f8f8f8;
+$dark_color: #636363;
+$light_color: #aeb3ca;
+
+$font_family: 'Montserrat', sans-serif;
+
+$types: 
+    $primary 'primary', 
+    $secondary 'secondary', 
+    $success 'success', 
+    $error 'error', 
+    $warning 'warning', 
+    $info 'info',
+    $light_color 'light',
+    $dark_color 'dark';
+
+$border_raduis: 5px;

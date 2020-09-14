@@ -1,0 +1,29 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    color: white;
+    div{
+        cursor: pointer;
+        text-align: center;
+        width: 40px;
+        margin: 0 5px;
+        padding: 10px;
+        border-radius: $border-raduis;
+        @include gradient($primary);
+        &:hover{
+            @include light($primary);
+        }
+        &:first-child{
+            margin-left: 0;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+        &.active{
+            @include gradient($secondary);
+            &:hover{
+                @include light($secondary);
+            }
+        }
+    }
+}

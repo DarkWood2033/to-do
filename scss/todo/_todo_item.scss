@@ -1,0 +1,37 @@
+.todo_item{
+    color: white;
+    background: $primary;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $primary;
+    @include light($primary);
+    @include gradient($primary);
+
+    .action{
+        div{
+            display: inline-block;
+            margin: 0 5px;
+        }
+    }
+
+    .text{
+        text-align: left;
+        p{
+            color: white
+        }
+        &.complited{
+            text-decoration: line-through;
+        }
+    }
+
+    &.secondary{
+        background: $secondary;
+        border: 1px solid $secondary;
+        @include light($secondary);
+        @include gradient($secondary);
+    }
+}

@@ -1,0 +1,28 @@
+.dialog{
+    .title{
+        border-radius: 10px 10px 0 0;
+        background: $secondary;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        button{
+            float: right;
+            color: darken($error, 10%);
+            &:hover{
+                color: darken($error, 20%)
+            }
+        }
+        @include background();
+    }
+    .content{
+        padding: 10px 15px;
+        background: white;
+        border-radius: 0 0 10px 10px;
+        & > div{
+            padding: 10px 0;
+        }
+        .action{
+            text-align: center;
+        }
+    }
+}
