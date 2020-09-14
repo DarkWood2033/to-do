@@ -1,5 +1,6 @@
 import { TODO_DELETE, TODO_CHANGE_STATUS, TODO_ADD, TODO_EDIT } from './todos/types';
 import { DIALOG_ADD, DIALOG_DELETE } from './dialogs/types';
+import { CATEGORY_ADD, CATEGORY_EDIT, CATEGORY_DELETE } from './categories/types';
 
 const cfgDispatch = {
     todos: {
@@ -11,6 +12,11 @@ const cfgDispatch = {
     dialogs: {
         add: DIALOG_ADD,
         delete: DIALOG_DELETE
+    },
+    categories: {
+        add: CATEGORY_ADD,
+        delete: CATEGORY_DELETE,
+        edit: CATEGORY_EDIT
     }
 };
 

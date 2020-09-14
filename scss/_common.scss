@@ -17,3 +17,11 @@ body{
 .row > div > div{
     height: 100%;
 }
+
+.form_control{
+    margin: 10px 0;
+
+    input, textarea, select{
+        margin-top: 5px;
+    }
+}

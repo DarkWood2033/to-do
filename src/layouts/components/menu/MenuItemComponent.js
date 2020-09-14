@@ -1,12 +1,15 @@
 import React from 'react';
 import pt from 'prop-types';
 import Icon from "../../../components/icons/Icon";
+import { Link } from 'react-router-dom';
 
-function MenuItemComponent({icon, text, url, isActive = false}){
+function MenuItemComponent({icon, text, url, color, isActive = false}){
     return (
-        <div className={'menu_item '+(isActive?'active':'')} data-label={' '+text}>
-            <Icon name={icon} type="light" size="20px" />
-        </div>
+        <Link to={url} style={{textDecoration:'none'}}>
+            <div className={'menu_item '+(isActive?'active':'')} data-label={' '+text}>
+                <Icon name={icon} type={color || 'light'} size="20px" />
+            </div>
+        </Link>
     );
 }
 

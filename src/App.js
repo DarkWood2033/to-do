@@ -1,9 +1,9 @@
 import React from 'react';
-import MainLayout from './layouts/MainLayout';
+import Router from './Router';
 
 function App() {
   return (
-    <MainLayout></MainLayout>
+    <Router />
   );
 }
 

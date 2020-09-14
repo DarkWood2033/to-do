@@ -1,11 +1,8 @@
 import React from "react";
-import ListRouter from "../../todo/ListRouter";
 
-function ContentComponent(){
+function ContentComponent({children}){
     return (
-        <div className="l_content">
-            <ListRouter />
-        </div>
+        <div className="l_content">{children}</div>
     );
 }
 

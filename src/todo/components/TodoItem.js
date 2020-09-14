@@ -6,7 +6,7 @@ import mapDispacthToProps from '../../store/mapDispacthToProps';
 import TodoForm from './TodoForm';
 import dialog from '../../core/layouts/Dialogs';
 
-function TodoItem({id, text, complited, deleteTodo, changeStatusTodo, editTodo}){
+function TodoItem({id, text, category_id, complited, deleteTodo, changeStatusTodo, editTodo}){
     return (
         <div className="todo_item">
             <div className="switch">
@@ -18,10 +18,10 @@ function TodoItem({id, text, complited, deleteTodo, changeStatusTodo, editTodo})
                     <button 
                         className="text info" 
                         onClick={() => dialog.prompt({
-                            data: {text},
+                            data: {text, category_id},
                             title: 'Редактирование задания',
                             form: TodoForm, 
-                            onAccept: text => editTodo({id, text, complited})
+                            onAccept: data => editTodo({id, ...data, complited})
                         }, {
                             btnText: 'Изменить'
                         })}

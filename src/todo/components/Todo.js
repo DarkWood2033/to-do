@@ -1,7 +1,5 @@
 import React from 'react';
 import TodoItem from './TodoItem';
-import {connect} from 'react-redux';
-import mapStateToProps from '../../store/mapStateToProps';
 
 function Todo({todos, page, oneOfPage = 5}){
     const start = (page - 1) * oneOfPage;
@@ -14,6 +12,7 @@ function Todo({todos, page, oneOfPage = 5}){
                     key={item.id}
                     id={item.id}
                     text={item.text}
+                    category_id={item.category_id}
                     complited={item.complited} />) 
                 : <p>Нет список задач.</p>
             }
@@ -21,4 +20,4 @@ function Todo({todos, page, oneOfPage = 5}){
     );
 }
 
-export default connect(mapStateToProps({todos: 'todos'}), null)(Todo);
+export default Todo;

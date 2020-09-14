@@ -5,6 +5,7 @@
         padding: 10px;
         text-align: center;
         width: 100%;
+        color: white;
         button{
             float: right;
             color: darken($error, 10%);
@@ -16,7 +17,7 @@
     }
     .content{
         padding: 10px 15px;
-        background: white;
+        background: var(--bg_color);
         border-radius: 0 0 10px 10px;
         & > div{
             padding: 10px 0;
