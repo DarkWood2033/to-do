@@ -5,6 +5,7 @@ import MainLayout from './layouts/MainLayout';
 
 /* Routes */
 import ListRouter from './todo/ListRouter';
+import SingleRouter from './todo/SingleRouter';
 import CategoryRouter from './categories/CategoryRouter';
 
 let history = createBrowserHistory({ basename: "" });
@@ -16,8 +17,8 @@ function Router(){
                 <Route path="/" exact>
                     <MainLayout>Главная</MainLayout>
                 </Route>
-                <Route path="/todos/:id">
-                    <MainLayout><ListRouter /></MainLayout>
+                <Route path="/todos/:category">
+                    <MainLayout><SingleRouter /></MainLayout>
                 </Route>
                 <Route path="/todos">
                     <MainLayout><ListRouter /></MainLayout>

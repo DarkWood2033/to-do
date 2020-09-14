@@ -6,18 +6,6 @@ let menuItem = [
         url: '/'
     },
     {
-        text: 'Профиль',
-        icon: 'user-o',
-        type: 'menu',
-        url: ''
-    },
-    {
-        text: 'Настройки',
-        icon: 'cog',
-        type: 'menu',
-        url: ''
-    },
-    {
         text: 'Категория',
         icon: 'list-alt',
         type: 'menu',

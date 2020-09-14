@@ -1,7 +1,5 @@
 import React from 'react';
 import TodoItem from './TodoItem';
-import {connect} from 'react-redux';
-import mapStateToProps from '../../store/mapStateToProps';
 
 function Todo({todos, page, oneOfPage = 5}){
     const start = (page - 1) * oneOfPage;
@@ -22,4 +20,4 @@ function Todo({todos, page, oneOfPage = 5}){
     );
 }
 
-export default connect(mapStateToProps({todos: 'todos'}), null)(Todo);
+export default Todo;
